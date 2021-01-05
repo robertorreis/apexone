@@ -1,0 +1,14 @@
+- name: ApexOne deploy Agentes Windows
+  include_vars:
+    file: windows.yml
+
+- name: Download the Agente Apex One
+    ansible.windows.win_get_url:
+      url: "{{ windows_url }}"
+      dest: "{{ default }}"
+
+- name: Run Remote Installation
+    ansible.windows.win_package:
+      path: ""{{ windows_pack }}"
+      state: present
+

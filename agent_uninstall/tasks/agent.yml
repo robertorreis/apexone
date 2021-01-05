@@ -1,0 +1,20 @@
+- name: Deep Security Agentes Windows
+  include_vars:
+    file: windows.yml
+
+- name: Download the file CUT
+  ansible.windows.win_copy:
+    src: "{{ CUT_way }}"
+    dest: "{{ default }}"
+    remote_src: no
+  with_items:
+  - "{{ item_1 }}"
+  - "{{ item_2 }}"
+  - "{{ item_3 }}"
+
+- name: executar a desinstalação remota
+  ansible.windows.win_package:
+    path: "{{ command }}"
+    state: present
+    arguments: -noinstall
+

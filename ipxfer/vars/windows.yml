@@ -1,0 +1,5 @@
+ipxfer_way: "way_of_the_ipxfer_file"
+default: C:\
+item_1: ipxfer.exe
+item_2: ipxfer_x64.exe
+item_3: OfcNTCer.dat 

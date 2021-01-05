@@ -1,0 +1,6 @@
+CUT_way: "path_file_of_CUT"
+default: C:\
+item_1: CUT_Silent.exe
+item_2: CUT_Silent.exe.config
+item_3: CUT.ini
+  

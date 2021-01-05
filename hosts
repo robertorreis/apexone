@@ -1,0 +1,21 @@
+[windows]
+
+reiswin10.cloud
+
+[macos]
+
+rreismacos.cloud
+
+[windows:vars]
+ansible_connection = "winrm"
+ansible_port = 5986
+ansible_winrm_transport = ntlm
+ansible_user = "Administrator@rreis.cloud"
+ansible_password = "password"
+ansible_winrm_server_cert_validation = ignore
+
+[macos:vars]
+ansible_connection = "ssh"
+ansible_user = "admin"
+ansible_ssh_pass =
+

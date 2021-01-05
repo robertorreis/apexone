@@ -1,0 +1,17 @@
+- name: Move agentes console
+  include_vars:
+    file: windows.yml
+
+- name: Download Ipxfer
+  ansible.windows.win_copy:
+    src: "{{ ipxfer_way }}"
+    dest: "{{ default }}"
+    remote_src: no
+    with_items:
+    - "{{ item_1 }}"
+    - "{{ item_2 }}"
+    - "{{ item_3 }}"
+
+- name: Move the agente
+  ansible.windows.win_command: "{{ command }}"
+
